@@ -35,6 +35,8 @@ app.get('/', (req,res)=>{
   res.send("Hello world")
 })
 
+//CORS
+app.use(cors())
 app.use(express.json())// the first parameter is ideally a path but since json has to applied for every route we removed the first parameter
 app.use('/fruits', fruitRouter)
 

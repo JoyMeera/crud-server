@@ -26,7 +26,7 @@
 //   console.log(`Example app listening on port ${port}`)
 // })
 
-
+require('cors')
 const express = require('express')
 const app = express()
 const fruitRouter = require('./routes/fruitRouter')
@@ -35,7 +35,7 @@ app.get('/', (req,res)=>{
   res.send("Hello world")
 })
 
-//CORS
+//CORS - Middleware
 app.use(cors())
 app.use(express.json())// the first parameter is ideally a path but since json has to applied for every route we removed the first parameter
 app.use('/fruits', fruitRouter)

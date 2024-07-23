@@ -26,7 +26,7 @@
 //   console.log(`Example app listening on port ${port}`)
 // })
 
-require('cors')
+const cors = require('cors')
 const express = require('express')
 const app = express()
 const fruitRouter = require('./routes/fruitRouter')
